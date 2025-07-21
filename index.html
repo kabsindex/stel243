@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEL243 - Boutique Digitale</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header .logo {
+      height: 60px;
+      width: auto;
+    }
+
+    .header-content {
+      text-align: right;
+      flex: 1;
+    }
+
+    .header-content h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .header-content p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .product {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      will-change: transform;
+    }
+
+    .product:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.5s ease;
+    }
+
+    .product:hover img {
+      transform: scale(1.05);
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .price-offer {
+      margin: 10px 0;
+      font-size: 15px;
+      color: #e74c3c;
+    }
+
+    .price-offer del {
+      color: #999;
+      margin-right: 5px;
+    }
+
+    .whatsapp-btn {
+      position: relative;
+      overflow: hidden;
+      margin-top: 10px;
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    
+    .whatsapp-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .whatsapp-btn:active {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-btn .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.7);
+      transform: scale(0);
+      animation: ripple 0.6s linear;
+      pointer-events: none;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-content {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="reveal">
+  <img src="https://i.postimg.cc/0Qt2Pj8M/EXO-DRC-243-024318.png" alt="STEL243 Logo" class="logo">
+  <div class="header-content">
+    <h1>STEL243 - DigiMarket</h1>
+    <p>Formations, services et outils numériques en un clic</p>
+  </div>
+</header>
+
+<div class="container reveal">
+  <div class="product-grid">
+    <div class="product reveal" style="animation-delay: 0.2s;">
+      <img src="https://i.postimg.cc/433tv167/IMG-20250322-WA0166-2.jpg" alt="Produit 1">
+      <h3>Boost Résaux sociaux</h3>
+      <p>📌BOOST t'es Réseaux sociaux avec STEL243 BOOSTER 🇨🇩 Tu veux gagner en visibilité et étendre ta notoriété sur les réseaux sociaux ?? STEL243 est là pour vous 🏆
+<br>
+<br>
+NOS SERVICES : 👇👇
+<br>
+<br>
+1. YOUTUBE : (Abonnés, Vues, Likes) Ainsi que le pack de Monétisation (3000 heure de visionnage + 36 000 vues + 1000 abonnés)
+<br>
+<br>
+2. FACEBOOK : (Abonnés, Vues, Likes) Ainsi que le pack de Monétisation (10k Abonnés+ 600 000 minutes de visionnage)
+<br>
+<br>
+3. TIKTOK : (Abonnés, Vues, Likes) Ainsi que le pack de Monétisation (10k Abonnés + 100 000 Vues)
+<br>
+<br>
+4. INSTAGRAM : (Abonnés, Vues, Likes) Ainsi que le pack de Monétisation (10k Abonnés)</p>
+    <!--price class : <div class="price-offer"><del>50 000 CDF</del> <strong>10 000 CDF (-80%)</strong></div>-->
+      <a href="https://wa.me/243997271570?text=Je%20souhaite%20en%20savoir%20plus%20sur%20le%20service%20de%20Boost%20R%C3%A9seaux%20Sociaux." target="_blank">
+        <button class="whatsapp-btn">📲 Contacter sur WhatsApp</button>
+      </a>
+    </div>
+
+    <div class="product reveal" style="animation-delay: 0.4s;">
+      <img src="https://i.postimg.cc/W4kvDBd5/IMG-20250704-WA0143.jpg" alt="Produit 2">
+      <h3>Compte Tiktok professionnel Monétiser</h3>
+      <p>🎉 Commandez aujourd'hui votre compte Tiktok professionnel Monétiser (Travailler avec les artistes) à seulement 5$ offre termine demain à 12heures.
+<br>
+<br>
+✅ T'es un artiste, rappeur, humoristique, influenceur,... tu veux gagner de l'argent sur Tiktok avec t'es vidéo ?
+VIENS VITE COMMANDER TON COMPTE PROFESSIONNEL MONÉTISER A 5$</p>
+      <div class="price-offer"><del>28 000 CDF</del> <strong>14 000 CDF (-50%)</strong></div>
+      <a href="https://wa.me/243997271570?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20service%20de%20compte%20TikTok%20professionnel%20mon%C3%A9tis%C3%A9." target="_blank">
+        <button class="whatsapp-btn">📲 Contacter sur WhatsApp</button>
+      </a>
+    </div>
+
+    <div class="product reveal" style="animation-delay: 0.6s;">
+      <img src="https://i.postimg.cc/4yCMDywG/IMG-20250704-WA0142.jpg" alt="Produit 3">
+      <h3>Bizpromo</h3>
+      <p>🚀 Fatigué d’envoyer des messages un à un sur WhatsApp ?
+Passe à la vitesse supérieure avec Bizpromo Bulk Sender !
+<br>
+<br>
+📩 Envoie des milliers de messages WhatsApp automatiquement  
+<br>
+👥 Gère ta base de données clients comme un pro  
+<br>
+<br>
+📊 Boost tes ventes avec un vrai outil marketing  
+<br>
+<br>
+✅ Rapide, simple, efficace  
+🔥 Résultats visibles dès le premier envoi !
+<br>
+<br>
+📲 Contacte-nous pour activer ta version premium aujourd’hui.
+L’automatisation, c’est maintenant</p>
+      <div class="price-offer"><del>14 000 CDF</del> <strong>8 500 CDF/Mois (-76%)</strong></div>
+      <a href="https://wa.me/243997271570?text=Je%20souhaite%20en%20savoir%20plus%20sur%20le%20service%20de%20Boost%20R%C3%A9seaux%20Sociaux" target="_blank">
+        <button class="whatsapp-btn">📲 Contacter sur WhatsApp</button>
+      </a>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="https://wa.me/243997271570?text=Salut%20STEL243%2C%20j%E2%80%99aimerais%20discuter%20d%E2%80%99un%20autre%20produit%20ou%20service%20num%C3%A9rique." target="_blank">
+      <button class="whatsapp-btn">💬 Autre besoin ? Parlons sur WhatsApp</button>
+    </a>
+  </div>
+</div>
+
+<footer class="reveal">
+  &copy; 2025 STEL243 | Tous droits réservés.
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const revealElems = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElems.forEach(elem => observer.observe(elem));
+
+    const maxTilt = 10;
+    document.querySelectorAll('.product').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        const rotateX = (y - 0.5) * maxTilt;
+        const rotateY = (0.5 - x) * maxTilt;
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+      });
+    });
+
+    document.querySelectorAll('.whatsapp-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        const size = Math.max(btn.offsetWidth, btn.offsetHeight);
+        ripple.style.width = ripple.style.height = size + 'px';
+        const rect = btn.getBoundingClientRect();
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+        btn.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
